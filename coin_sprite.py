@@ -10,10 +10,11 @@ class Coin(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.color = color
         self.status = 1
-        self.location = loc
+        self.rect.x = loc[1]
+        self.rect.y = loc[0]
 
     def get_location(self):
-        return self.location[0], self.location[1]
+        return self.rect.x, self.rect.y
 
     def get_color(self):
         sleep(0.1)
